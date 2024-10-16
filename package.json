@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node --import tsx dist/index.js",
 		"dev": "tsx watch src/index.ts",
-		"build": "rm -rf dist && tsc"
+		"build": "rm -rf dist public && tsc && mkdir public && cp -r src/public/* public"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.12.0",
